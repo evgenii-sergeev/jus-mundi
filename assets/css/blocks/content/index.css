@@ -1,0 +1,12 @@
+.content {
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    max-width: 1310px;
+  }
+
+@media (max-width: 1310px) {
+    .content {
+      padding: 65px; /* Adjust the padding value for smaller screens */
+    }
+  }

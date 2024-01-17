@@ -1,0 +1,53 @@
+.newsfeed {
+    background-color: var(--light);
+}
+
+.newsfeed__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsfeed__title {
+    color: var(--main);
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.newsfeed__text {
+    color: var(--main);
+    text-align: center;
+    font-kerning: none;
+    font-feature-settings: 'liga' off;
+    font-family: Larken;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+}
+
+.swiper {
+    width: 1310px;
+    height: 272px;
+}
+
+.newsfeed__link {
+    color: var(--main);
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}

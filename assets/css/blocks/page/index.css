@@ -1,0 +1,33 @@
+.page {
+    min-width: 1310px;
+    height: 100%;
+    font:
+      18px/2em 'IBM Plex Sans',
+      sans-serif;
+  }
+  
+  .page__heading {
+    font-family: Neucha, sans-serif;
+    font-weight: normal;
+    line-height: 1.2em;
+  }
+  
+  .page__heading-h1 {
+    font-size: 72px;
+  }
+  
+  .page__heading-h2 {
+    font-size: 60px;
+  }
+  
+  .page__heading-h3 {
+    font-size: 34px;
+  }
+  
+  .page__text-white {
+    color: var(--white);
+  }
+  
+  .page__text-accent {
+    color: var(--main);
+  }

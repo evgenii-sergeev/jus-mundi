@@ -1,0 +1,41 @@
+.button {
+    --button-text: var(--white);
+    --button-background: var(--blue);
+
+    display: flex;
+    align-items: center;
+    width: 263px;
+    padding: 20px 32px;
+    font: 14px/1.2em 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-align: start;
+    text-transform: uppercase;
+    color: var(--button-text);
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 0px 8px 32px 0px rgba(37, 79, 109, 0.24);
+}
+
+.button:hover,
+.button:focus {
+    --button-text: var(--main);
+    --button-background: var(--light);
+}
+
+.button--primary {
+    background: var(--button-background);
+}
+
+.button__icon {
+    color: var(--button-text);
+}
+
+.button__text {
+    white-space: nowrap;
+}

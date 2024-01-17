@@ -1,0 +1,37 @@
+.logo-image--icc {
+    position: absolute;
+    z-index: 1;
+    top: 42px;
+    width: 483px;
+    height: 483px;
+    border-radius: 50%;
+    background: #FFF;
+    box-shadow: 0px 0px 128px 0px rgba(0, 0, 0, 0.10);
+    background-image: url(../../../../public/images/logo_icc.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.logo-image--jus-mundi {
+    position: absolute;
+    top: 450px;
+    z-index: 2;
+    width: 187.125px;
+    height: 187.125px;
+    border-radius: 50%;
+    background: #FFF;
+    box-shadow: 0px 0px 192px 0px rgba(0, 0, 0, 0.10);
+    background-image: url(../../../../public/images/logo_jm.svg);
+    background-color: rgba(255, 255, 255, 0.1);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.logo-image--documents {
+    position: absolute;
+    left: 250px;
+    width: 478px;
+    height: 478px;
+    border-radius: 50%;
+    background-image: url(../../../../public/images/output-onlinegiftools.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
