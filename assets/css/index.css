@@ -13,4 +13,6 @@
 @import './blocks/footer/index.css';
 @import './blocks/button/index.css';
 
+@import './blocks/newsfeed-card/index.css';
+
 @import './blocks/logo/index.css';

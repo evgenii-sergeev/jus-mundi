@@ -5,8 +5,8 @@
             <p class="newsfeed__text">
                 ICC International Court of Arbitration News & Links
             </p>
-            <div class="swiper">
-
+            <div class="cards-swiper">
+                <CardsSwiper />
             </div>
             <a href="#" class="newsfeed__link">
                 read all news

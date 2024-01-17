@@ -35,7 +35,10 @@
     letter-spacing: -0.5px;
 }
 
-.swiper {
+.cards-swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1310px;
     height: 272px;
 }
