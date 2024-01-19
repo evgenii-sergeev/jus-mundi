@@ -15,6 +15,11 @@
     min-width: 50%;
 }
 
+.hero__section--left,
+.hero__section--right {
+    position: relative;
+}
+
 .hero__title {
     font-family: Larken;
     font-size: 56px;
@@ -25,6 +30,21 @@
     margin-bottom: 32px;
 }
 
+.fade-in-bottom {
+	animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+}
+
+@keyframes fade-in-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
 .hero__text {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 18px;
@@ -33,3 +53,52 @@
     line-height: 32px;
     margin-bottom: 93px;
 }
+
+.hero__text--fade-in {
+	animation: hero__text--fade-in 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+}
+
+@keyframes hero__text--fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.hero__section--left::before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.hero__section--left::after {
+    content: "";
+    position: absolute;
+    bottom: 41px;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--accent);
+    transform: rotate(90deg);
+}
+
+.hero__section--right::after {
+    content: "";
+    position: absolute;
+    bottom: 41px;
+    right: 0;
+    display: block;
+    width: 39px;
+    height: 2px;
+    background-color: var(--accent);
+    transform: rotate(45deg);
+}
+

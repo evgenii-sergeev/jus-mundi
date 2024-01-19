@@ -39,3 +39,16 @@
 .button__text {
     white-space: nowrap;
 }
+
+.fade-in {
+	animation: fade-in 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

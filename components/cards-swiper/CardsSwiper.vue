@@ -1,23 +1,43 @@
-
 <template>
     <Swiper
-      :slides-per-view="4"
-      :loop="false"
-      :centeredSlides="true"
-      :spaceBetween="24"
-      :autoplay="{
-        delay: 8000,
-        disableOnInteraction: true,
-      }"
-      :creative-effect="{
-        prev: {
-          shadow: false,
-          translate: ['-20%', 0, -1],
-        },
-        next: {
-          translate: ['100%', 0, 0],
-        },
-      }"
+        :modules="[SwiperFreeMode]"
+        :slides-per-view="4"
+        :breakpoints = "{
+            320: {
+                slidesPerView: 3,
+                spaceBetween: 24
+            },
+            480: {
+                slidesPerView: 4,
+                spaceBetween: 24
+            },
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 24
+            },
+            1441: {
+                slidesPerView: 5,
+                spaceBetween: 24
+            }
+        }"
+        :loop="false"
+        :spaceBetween="24"
+        :slidesOffsetBefore="slidesOffsetBefore"
+        :slidesOffsetAfter="slidesOffsetAfter"
+        :freeMode="{
+            enabled: true,
+            freeModeMomentum: true,
+            freeModeMomentumRatio: 0.5, 
+        }"
+        :creative-effect="{
+            prev: {
+                shadow: false,
+                translate: ['-20%', 0, -1],
+            },
+            next: {
+                translate: ['100%', 0, 0],
+            },
+        }"
     >
       <SwiperSlide v-for="(card, idx) in cards" :key="idx">
         <div class="newsfeed-card">
@@ -25,10 +45,27 @@
             <a href="#" class="newsfeed-card__link">Read more</a>
         </div>
       </SwiperSlide>
+      <!-- <SwiperControls @setSwiper="onSetSwiper"/> -->
     </Swiper>
   </template>
 
 <script setup>
+const slidesOffsetBefore = ref(0)
+const slidesOffsetAfter = ref(0)
+onBeforeMount(() => {
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    const containerWidth = document.querySelector('.content')?.offsetWidth
+    slidesOffsetBefore.value = (windowWidth - containerWidth)
+    slidesOffsetAfter.value = (windowWidth - containerWidth) / 2
+})
+const props = defineProps(['sliderInitialOffset'])
+let swiperInstace = null
+const onSetSwiper = (swiper) => {
+    swiperInstace = swiper
+    watch(() => props.sliderInitialOffset, () => {
+        swiperInstace.value.translateTo(0)
+    })
+}
 const cards = useState(() => [
     {
         id: 1,
