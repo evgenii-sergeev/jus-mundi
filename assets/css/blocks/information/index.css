@@ -37,7 +37,7 @@
     position: absolute;
     left: -60px;
     top: 0;
-    background-image: url(/images/quote_2.svg);
+    background-image: url("/images/quote_2.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 28px;
@@ -50,7 +50,7 @@
     position: absolute;
     right: -60px;
     bottom: -4px;
-    background-image: url(/images/quote_1.svg);
+    background-image: url("/images/quote_1.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 28px;

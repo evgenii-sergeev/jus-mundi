@@ -53,7 +53,7 @@
     border-radius: 50%;
     background: #FFF;
     box-shadow: 0px 0px 192px 0px rgba(0, 0, 0, 0.10);
-    background-image: url(/images/logo_jm.svg);
+    background-image: url("/images/logo_jm.svg");
     background-color: rgba(255, 255, 255, 0.1);
     background-position: center;
     background-repeat: no-repeat;
@@ -80,7 +80,7 @@
     width: 478px;
     height: 478px;
     border-radius: 50%;
-    background-image: url(/images/output-onlinegiftools.gif);
+    background-image: url("/images/output-onlinegiftools.gif");
     background-size: cover;
     background-repeat: no-repeat;
 }
